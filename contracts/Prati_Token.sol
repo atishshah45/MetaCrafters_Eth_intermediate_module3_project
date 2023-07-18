@@ -19,9 +19,9 @@ contract Prati_Token{
         return balance[msg.sender];
     }
 
-    function MintToken(address _address, uint _amount) public  {
-        require(msg.sender == owner,"Owner is only allowed to mint token to a provided address");
-        balance[_address] += _amount;
+    function MintToken(uint _amount) public  {
+        require(msg.sender == owner,"Owner is only allowed to mint token");
+        balance[mes.sender] += _amount;
         totalSupply += _amount;
     }
 
